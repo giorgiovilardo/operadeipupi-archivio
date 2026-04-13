@@ -1,0 +1,20 @@
+{
+  "short_name": "Opera dei Pupi",
+  "name": "L'Opera dei Pupi - Archivio",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/archivio/",
+  "display": "standalone",
+  "theme_color": "#7f0917",
+  "background_color": "#ffffff"
+}

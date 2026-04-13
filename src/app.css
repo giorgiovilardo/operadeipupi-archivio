@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "PT Serif", serif;
+  /* Match Bulma's font sizes (Tailwind defaults are 2px smaller) */
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 2.25rem;
+}
+
+@plugin "daisyui" {
+  themes: autumn --default;
+}
+@plugin "daisyui/theme" {
+  name: autumn;
+  default: true;
+  --color-primary: #7f0917;
+  --color-secondary: #0e7c7b;
+  --color-secondary-content: #fff;
+  --color-info: #de9e36;
+  --color-success: #82d173;
+  --color-warning: #ff4b3e;
+  --color-error: #985f99;
+  --color-error-content: #fff;
+}
+
+body {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bulma-style navbar items: shrink instead of wrapping */
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+}
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Hero banner — replicates Bulma .hero.is-info.is-large.has-background */
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  background-color: #de9e36;
+}
+.hero-banner-img {
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+.hero-banner-body {
+  padding: 18rem 4.5rem;
+}
+
+/*
+ * Bulma ".content" typography — paragraph spacing, heading sizes,
+ * list styling, hr, blockquote, links, clearfix for floated images.
+ */
+.content-body p {
+  margin-bottom: 1em;
+}
+.content-body h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+.content-body h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5714em;
+  margin-top: 1.1428em;
+}
+.content-body h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.6666em;
+  margin-top: 1.3333em;
+}
+.content-body h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.8em;
+}
+.content-body ul {
+  list-style: disc;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+.content-body li + li {
+  margin-top: 0.25em;
+}
+.content-body hr {
+  border: none;
+  border-top: 1px solid #dbdbdb;
+  margin: 1.5rem 0;
+}
+.content-body a {
+  color: #0e7c7b;
+  text-decoration: underline;
+}
+.content-body img {
+  max-width: 100%;
+  height: auto;
+}
+.content-body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content-body blockquote {
+  border-left: 4px solid #dbdbdb;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+/* Responsive Google Maps embed */
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
